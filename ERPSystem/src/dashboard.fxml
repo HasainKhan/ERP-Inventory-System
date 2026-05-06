@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.erp.controller.DashboardController">
+
+    <!-- SIDEBAR -->
+    <left>
+
+        <VBox spacing="20"
+              style="-fx-background-color:#2c3e50;
+                     -fx-padding:20;">
+
+            <Label text="ERP SYSTEM"
+                   style="-fx-text-fill:white;
+                          -fx-font-size:22px;
+                          -fx-font-weight:bold;"/>
+
+            <!-- SIDEBAR BUTTONS -->
+            <Button text="🏠 Dashboard"
+                    styleClass="sidebar-button"
+                    onAction="#handleDashboard"/>
+
+            <Button text="📦 Inventory"
+                    styleClass="sidebar-button"
+                    onAction="#handleInventory"/>
+
+            <Button text="📊 Reports"
+                    styleClass="sidebar-button"
+                    onAction="#handleReports"/>
+
+            <Button text="🚪 Logout"
+                    styleClass="sidebar-button"
+                    onAction="#handleLogout"/>
+
+        </VBox>
+
+    </left>
+
+    <!-- MAIN CONTENT -->
+    <center>
+
+        <VBox spacing="15"
+              style="-fx-padding:20;">
+
+            <!-- TITLE -->
+            <Label text="Inventory Dashboard"
+                   styleClass="dashboard-title"/>
+
+            <!-- DASHBOARD STATISTICS -->
+            <HBox spacing="15">
+
+                <!-- TOTAL PRODUCTS -->
+                <VBox spacing="5"
+                      styleClass="card"
+                      prefWidth="180">
+
+                    <Label text="📦 Total Products"
+                           style="-fx-text-fill:#7f8c8d;"/>
+
+                    <Label fx:id="lblTotalProducts"
+                           text="0"
+                           style="-fx-font-size:24px;
+                                  -fx-text-fill:#2c3e50;"/>
+
+                </VBox>
+
+                <!-- LOW STOCK -->
+                <VBox spacing="5"
+                      styleClass="card"
+                      prefWidth="180">
+
+                    <Label text="⚠ Low Stock"
+                           style="-fx-text-fill:#7f8c8d;"/>
+
+                    <Label fx:id="lblLowStock"
+                           text="0"
+                           style="-fx-font-size:24px;
+                                  -fx-text-fill:#e74c3c;"/>
+
+                </VBox>
+
+                <!-- INVENTORY VALUE -->
+                <VBox spacing="5"
+                      styleClass="card"
+                      prefWidth="220">
+
+                    <Label text="💰 Inventory Value"
+                           style="-fx-text-fill:#7f8c8d;"/>
+
+                    <Label fx:id="lblInventoryValue"
+                           text="₹0"
+                           style="-fx-font-size:24px;
+                                  -fx-text-fill:#27ae60;"/>
+
+                </VBox>
+
+                <!-- ACTIVE USERS -->
+                <VBox spacing="5"
+                      styleClass="card"
+                      prefWidth="180">
+
+                    <Label text="👥 Active Users"
+                           style="-fx-text-fill:#7f8c8d;"/>
+
+                    <Label fx:id="lblUsers"
+                           text="2"
+                           style="-fx-font-size:24px;
+                                  -fx-text-fill:#8e44ad;"/>
+
+                </VBox>
+
+            </HBox>
+
+            <!-- CRUD FORM -->
+            <HBox spacing="10">
+
+                <TextField fx:id="txtName"
+                           promptText="Product Name"/>
+
+                <TextField fx:id="txtStock"
+                           promptText="Stock"/>
+
+                <TextField fx:id="txtROL"
+                           promptText="ROL"/>
+
+                <TextField fx:id="txtPrice"
+                           promptText="Price"/>
+
+                <Button fx:id="btnAdd"
+                        text="Add"
+                        onAction="#handleAdd"/>
+
+                <Button fx:id="btnUpdate"
+                        text="Update"
+                        onAction="#handleUpdate"/>
+
+                <Button fx:id="btnDelete"
+                        text="Delete"
+                        onAction="#handleDelete"/>
+
+            </HBox>
+
+            <!-- SEARCH -->
+            <TextField fx:id="txtSearch"
+                       promptText="Search Product"
+                       onKeyReleased="#handleSearch"/>
+
+            <!-- TABLE CARD -->
+            <VBox styleClass="card">
+
+                <TableView fx:id="table"
+                           prefHeight="250">
+
+                    <columns>
+
+                        <TableColumn fx:id="colId"
+                                     text="ID"/>
+
+                        <TableColumn fx:id="colName"
+                                     text="Product"/>
+
+                        <TableColumn fx:id="colStock"
+                                     text="Stock"/>
+
+                        <TableColumn fx:id="colROL"
+                                     text="ROL"/>
+                        <TableColumn fx:id="colPrice"
+                                     text="Price"/>
+
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+            <!-- ALERT -->
+            <Label fx:id="alertLabel"/>
+
+            <!-- CHART CARD -->
+            <VBox styleClass="card">
+
+                <LineChart fx:id="chart">
+
+                    <xAxis>
+                        <CategoryAxis label="Products"/>
+                    </xAxis>
+
+                    <yAxis>
+                        <NumberAxis label="Stock"/>
+                    </yAxis>
+
+                </LineChart>
+
+            </VBox>
+
+            <!-- EXPORT -->
+            <Button fx:id="btnExport"
+                    text="Export CSV"
+                    onAction="#handleExport"/>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

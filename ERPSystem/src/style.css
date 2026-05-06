@@ -1,0 +1,166 @@
+/* ROOT */
+.root {
+
+    -fx-font-family: "Segoe UI";
+
+    -fx-background-color: #f4f6f9;
+}
+
+/* LABELS */
+.label {
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+}
+
+/* DASHBOARD TITLE */
+.dashboard-title {
+
+    -fx-font-size: 24px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #2c3e50;
+}
+
+/* BUTTONS */
+.button {
+
+    -fx-background-color: #3498db;
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8;
+
+    -fx-padding: 8 15 8 15;
+
+    -fx-cursor: hand;
+
+    -fx-scale-x: 1;
+
+    -fx-scale-y: 1;
+}
+
+.button:hover {
+
+    -fx-background-color: #2980b9;
+
+    -fx-scale-x: 1.05;
+
+    -fx-scale-y: 1.05;
+}
+
+/* SIDEBAR BUTTONS */
+.sidebar-button {
+
+    -fx-background-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-pref-width: 180;
+}
+
+.sidebar-button:hover {
+
+    -fx-background-color: #34495e;
+
+    -fx-background-radius: 8;
+}
+
+/* TEXTFIELDS */
+.text-field,
+.password-field {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 8;
+
+    -fx-border-radius: 8;
+
+    -fx-border-color: #dcdde1;
+
+    -fx-padding: 8;
+}
+
+/* TABLE */
+.table-view {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+
+    -fx-padding: 5;
+}
+
+.table-view .column-header {
+
+    -fx-background-color: #3498db;
+}
+
+.table-view .column-header .label {
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+}
+
+/* CHART */
+.chart {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 10;
+
+    -fx-padding: 10;
+}
+
+/* ALERT LABEL */
+#alertLabel {
+
+    -fx-text-fill: #e74c3c;
+
+    -fx-font-weight: bold;
+
+    -fx-font-size: 14px;
+}
+
+/* CARD DESIGN */
+.card {
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 15;
+
+    -fx-padding: 15;
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,0,0,0.1),
+        10,
+        0,
+        0,
+        4
+    );
+}
+
+/* CARD HOVER EFFECT */
+.card:hover {
+
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(52,152,219,0.4),
+        20,
+        0,
+        0,
+        6
+    );
+}

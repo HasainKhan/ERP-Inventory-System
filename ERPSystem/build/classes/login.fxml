@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.erp.controller.LoginController"
+           style="-fx-background-color:
+                  linear-gradient(to bottom right,
+                  #2c3e50,
+                  #3498db);">
+
+    <!-- LOGIN CARD -->
+    <VBox spacing="20"
+          alignment="CENTER"
+          maxWidth="380"
+          styleClass="card">
+
+        <padding>
+            <Insets top="35"
+                    right="35"
+                    bottom="35"
+                    left="35"/>
+        </padding>
+
+        <!-- ERP ICON -->
+        <Label text="🏢"
+               style="-fx-font-size:50px;"/>
+
+        <!-- TITLE -->
+        <Label text="ERP SYSTEM"
+               style="-fx-font-size:30px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:#2c3e50;"/>
+
+        <!-- SUBTITLE -->
+        <Label text="Inventory Management Portal"
+               style="-fx-text-fill:#7f8c8d;
+                      -fx-font-size:14px;"/>
+
+        <!-- USERNAME -->
+        <TextField fx:id="username"
+                   promptText="👤 Username"
+                   prefHeight="42"
+                   prefWidth="260"/>
+
+        <!-- PASSWORD -->
+        <PasswordField fx:id="password"
+                       promptText="🔒 Password"
+                       prefHeight="42"
+                       prefWidth="260"/>
+
+        <!-- LOGIN BUTTON -->
+        <Button text="🔐 LOGIN"
+                onAction="#handleLogin"
+                prefWidth="260"
+                prefHeight="42"
+                style="-fx-font-size:14px;"/>
+
+        <!-- ERROR MESSAGE -->
+        <Label fx:id="message"
+               style="-fx-text-fill:#e74c3c;
+                      -fx-font-weight:bold;"/>
+
+        <!-- FOOTER -->
+        <Label text="© ERP Inventory System"
+               style="-fx-text-fill:#95a5a6;
+                      -fx-font-size:11px;"/>
+
+    </VBox>
+
+</StackPane>
