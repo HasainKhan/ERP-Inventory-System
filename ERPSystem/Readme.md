@@ -247,4 +247,4 @@ This project is developed for educational and portfolio purposes.
 ---
 
 # 🙌 Author
-Hasain khan M 
+Hasain khan M  Rishikiran Korrapatti 
